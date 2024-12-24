@@ -143,7 +143,7 @@ const getOrderProductItems = async ({
 
     return productList
 }
-//http://localhost:8000/api/order/webhook
+//http://localhost:8080/api/order/webhook
 export const webhookStripe = async (request, response) => {
     const event = request.body;
     const endPointSecret = process.env.STRIPE_ENDPOINT_WEBHOOK_SECRET_KEY
