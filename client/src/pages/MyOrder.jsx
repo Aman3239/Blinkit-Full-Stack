@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import NoData from '../components/NoData'
 import { DisplayPriceInRupees } from '../utils/DispalyPriceinRupees'
+import moment from 'moment'
 
 
 const MyOrder = () => {
@@ -21,7 +22,10 @@ const MyOrder = () => {
         orders.map((order, index) => {
           return (
             <div key={order._id + index + "orders"} className='border rounded p-4  text-sm'>
-              <p>Order No : {order?.orderId}</p>
+              <div className='flex items-center justify-between gap-3'>
+                <p>Order No : {order?.orderId}</p>
+                <p className='font-medium lg:text-lg'>{moment(order.createdAt).format('LL')}</p>
+              </div>
               <div className=' flex justify-between items-center gap-2 my-2'>
                 <div className='flex gap-3 items-center justify-center'>
                   <img src={order.product_details.image[0]}

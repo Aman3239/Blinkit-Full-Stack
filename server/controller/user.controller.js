@@ -2,12 +2,12 @@ import sendEmail from "../config/sendEmail.js"
 import UserModel from "../models/user.model.js"
 import bcryptjs from "bcryptjs"
 import verifyEmailTempate from "../uitls/verifyEmailTemplate.js"
-import { generatedAccessToken } from "../uitls/generatedAccessToken.js"
-import { geteratedRefreshToken } from "../uitls/geteratedRefreshToken.js"
 import uploadImageCloudinary from "../uitls/uploadImageCloudinary.js"
 import generateOtp from "../uitls/generateOtp.js"
 import forgotPasswordTemplate from "../uitls/forgotPasswordTemplate.js"
 import jwt from "jsonwebtoken"
+import generatedAccessToken from "../uitls/generatedAccessToken.js"
+import geteratedRefreshToken from "../uitls/geteratedRefreshToken.js"
 
 export async function registerUserController(request, response) {
     try {
