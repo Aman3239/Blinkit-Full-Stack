@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-// import logo from "../assets/logo.png"
-import logo1 from '../assets/logo1.svg'
+import logo from "../assets/logo.png"
+// import logo1 from '../assets/logo1.svg'
 import Search from './Search'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -64,17 +64,17 @@ const Headers = () => {
                         <div className='h-full'>
                             <Link to={"/"} className='h-full flex justify-center items-center'>
                                 <img
-                                    src={logo1}
-                                    // width={150}
-                                    width={70}
+                                    src={logo}
+                                    width={150}
+                                    // width={70}
                                     height={60}
                                     alt="logo"
                                     className='hidden lg:block'
                                 />
                                 <img
-                                    src={logo1}
-                                    // width={120}
-                                    width={40}
+                                    src={logo}
+                                    width={120}
+                                    // width={40}
                                     height={60}
                                     alt="logo"
                                     className='lg:hidden'
@@ -89,7 +89,7 @@ const Headers = () => {
                         {/* login and my cart */}
                         <div>
                             {/* user icon display in only mobile version */}
-                            <button onClick={handleMobileUser} className='text-neutral-600 lg:hidden'>
+                            <button onClick={handleMobileUser} className='text-green-600 font-semibold lg:hidden'>
                                 <FaRegCircleUser size={26} />
                             </button>
                             {/* user icon display in only destop version */}

@@ -16,7 +16,7 @@ const CardProduct = ({ data }) => {
 
 
     return (
-        <Link to={url} className='border py-2 lg:p-4 grid gap-1 lg:gap-3 min-w-36 lg:min-w-52 rounded bg-white'>
+        <Link to={url} className='border py-2 lg:p-4 grid gap-1 lg:gap-3 min-w-40 lg:min-w-52 rounded bg-white'>
             <div className='min-h-20 w-full max-h-24 lg:max-h-32 overflow-hidden'>
                 <img src={data.image[0]}
                     className='w-full h-full object-scale-down lg:scale-125'
@@ -37,7 +37,7 @@ const CardProduct = ({ data }) => {
             <div className='font-medium text-ellipsis lg:text-base text-sm lg:px-0 px-2 line-clamp-2'>
                 {data.name}
             </div>
-            <div className='w-fit px-2 lg:px-0 text-sm lg:text-base'>
+            <div className='w-fit px-2 lg:px-0 text-sm font-medium lg:text-base'>
                 {data.unit}
 
             </div>
