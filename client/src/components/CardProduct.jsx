@@ -22,14 +22,14 @@ const CardProduct = ({ data }) => {
                     className='w-full h-full object-scale-down lg:scale-125'
                     alt="" />
             </div>
-            <div className='flex items-center lg:gap-4'>
+            <div className='flex items-center justify-between  gap-4 text-base p-2'>
                 <div className='p-[1px] text-green-600 bg-green-50 rounded text-xs lg:text-sm w-fit px-2 lg:px-0 '>
                     10 min
                 </div>
                 <div>
                     {
                         Boolean(data.discount) && (
-                            <p className='text-green-600 bg-green-100 px-2 rounded w-fit text-xs'>{data.discount}% discount</p>
+                            <p className='text-green-600 bg-green-100 px-2 rounded w-fit text-xs'>{data.discount}% Off</p>
                         )
                     }
                 </div>
@@ -37,7 +37,7 @@ const CardProduct = ({ data }) => {
             <div className='font-medium text-ellipsis lg:text-base text-sm lg:px-0 px-2 line-clamp-2'>
                 {data.name}
             </div>
-            <div className='w-fit px-2 lg:px-0 text-sm font-medium lg:text-base'>
+            <div className='w-fit px-2 lg:px-0 text-sm font-base lg:text-base'>
                 {data.unit}
 
             </div>

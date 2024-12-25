@@ -143,7 +143,7 @@ const ProductDisplayPage = () => {
             }
             {
               data.discount && (
-                <p className='font-bold text-green-600 lg:text-2xl'>{data.discount}% <span className='text-base text-neutral-500'>Discount</span></p>
+                <p className='font-bold text-green-600 lg:text-2xl'>{data.discount}% <span className='text-base text-neutral-500'>Off</span></p>
               )
             }
           </div>
@@ -169,7 +169,7 @@ const ProductDisplayPage = () => {
             />
             <div className='text-sm'>
               <div className='font-semibold'>Superfast Delivery</div>
-              <p>Get your order delivered to your doorstep at the earliest from dark store near you.</p>
+              <p> claGet your order delivered to your doorstep at the earliest from dark store near you.</p>
             </div>
           </div>
 
