@@ -3,6 +3,7 @@ import OrderModel from "../models/order.model.js"
 import CartProductModel from "../models/cartProduct.model.js"
 import UserModel from "../models/user.model.js"
 import Stripe from "../config/stripe.js"
+const endPointSecret = process.env.STRIPE_ENDPOINT_WEBHOOK_SECRET_KEY
 import { request, response } from "express"
 export const CashOnDeliveryOrderController = async (request, response) => {
     try {
@@ -145,18 +146,18 @@ const getOrderProductItems = async ({
 }
 //http://localhost:8080/api/order/webhook
 export const webhookStripe = async (request, response) => {
-    const event = request.body;
-    const endPointSecret = process.env.STRIPE_ENDPOINT_WEBHOOK_SECRET_KEY
-
     const sig = request.headers['stripe-signature'];
-
+    
+    
+    
     const payloadString = JSON.stringify(request.body)
-
+    
     const header = Stripe.webhooks.generateTestHeaderString({
         payload: payloadString,
         secret: endPointSecret,
     });
-
+    
+    let event = request.body;
     try {
         event = Stripe.webhooks.constructEvent(payloadString, header, endPointSecret);
     }
